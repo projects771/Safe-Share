@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Ranchers', cursive, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-numeric: 'Archivo', sans-serif;
+
+  --color-volt: #CCFF00;
+  --color-dark: #121212;
+  --color-surface: #181818;
+  --color-muted: #777777;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Ranchers', cursive, sans-serif;
+  }
+  .font-mono {
+    font-family: 'Space Mono', monospace;
+  }
+  .font-sans {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  .font-numeric {
+    font-family: 'Archivo', sans-serif;
+  }
+}
+
+/* Hard Brutalist Shadows */
+.shadow-brutal-sm {
+  box-shadow: 2px 2px 0px #000000;
+}
+.shadow-brutal {
+  box-shadow: 4px 4px 0px #000000;
+}
+.shadow-brutal-lg {
+  box-shadow: 8px 8px 0px #000000;
+}
+.shadow-brutal-white {
+  box-shadow: 4px 4px 0px #FFFFFF;
+}
+.shadow-brutal-white-lg {
+  box-shadow: 8px 8px 0px #FFFFFF;
+}
+.shadow-brutal-volt {
+  box-shadow: 4px 4px 0px #CCFF00;
+}
+.shadow-brutal-volt-lg {
+  box-shadow: 8px 8px 0px #CCFF00;
+}
+
+/* Button interactive hover animation */
+.btn-brutal {
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+.btn-brutal:hover:not(:disabled) {
+  transform: translate(-2px, -2px);
+}
+.btn-brutal:active:not(:disabled) {
+  transform: translate(2px, 2px);
+}
+.btn-brutal-volt:hover:not(:disabled) {
+  box-shadow: 6px 6px 0px #FFFFFF;
+}
+.btn-brutal-volt:active:not(:disabled) {
+  box-shadow: 2px 2px 0px #FFFFFF;
+}
+
+/* Vertical Curtain Ribbed Background Texture */
+.curtain-texture-hero {
+  background-color: #000000;
+  background-image: 
+    radial-gradient(ellipse at 50% 0%, rgba(204, 255, 0, 0.05) 0%, transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      #000000 0px,
+      #030303 14px,
+      #131313 28px,
+      #1e1e1e 42px,
+      #101010 56px,
+      #020202 70px,
+      #000000 84px
+    );
+  background-size: 100% 100%, 84px 100%;
+}
+
+.curtain-texture-creators {
+  background-color: #000000;
+  background-image: 
+    radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.03) 0%, transparent 70%),
+    repeating-linear-gradient(
+      90deg,
+      #000000 0px,
+      #030303 14px,
+      #141414 28px,
+      #1f1f1f 42px,
+      #111111 56px,
+      #020202 70px,
+      #000000 84px
+    );
+  background-size: 100% 100%, 84px 100%;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border: 1px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CCFF00;
+}
